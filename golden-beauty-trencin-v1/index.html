@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="theme-color" content="#f4efe6" />
+  <meta name="description" content="Neoficiálny demo návrh webu pre GOLDEN beauty Trenčín." />
+  <title>GOLDEN beauty Trenčín — demo web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Preskočiť na obsah</a>
+
+  <header class="site-header" aria-label="Hlavná navigácia">
+    <a class="brand" href="#top" aria-label="GOLDEN beauty Trenčín — úvod">
+      <span class="brand-mark" aria-hidden="true">G</span>
+      <span class="brand-copy">
+        <strong>GOLDEN</strong>
+        <span>beauty Trenčín</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Sekcie stránky">
+      <a href="#salon">Salón</a>
+      <a href="#termin">Termín</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="header-cta" href="tel:+421915183517">Zavolať</a>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Kozmetický salón · Trenčín</p>
+        <h1 id="hero-title">Priestor pre chvíľu, ktorá patrí vám.</h1>
+        <p class="hero-lede">
+          GOLDEN beauty nájdete na Pod Juhom 7666 v Trenčíne. Pre termín alebo otázku stačí zavolať — alebo si v tomto demo návrhu prejsť jednoduchú požiadavku na termín.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#termin">Požiadať o termín</a>
+          <a class="button button-ghost" href="tel:+421915183517">+421 915 183 517</a>
+        </div>
+        <p class="trust-line">
+          <span class="trust-score">5,0 / 5</span>
+          <span>6 hodnotení na Orly Kozmetiky</span>
+          <a href="https://www.orlykozmetiky.eu/profile-122224-golden-beauty-trencin" target="_blank" rel="noopener noreferrer">zdroj</a>
+        </p>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="hero-card">
+          <span class="hero-card-kicker">GOLDEN</span>
+          <span class="hero-card-word">beauty</span>
+          <span class="hero-card-city">TRENČÍN</span>
+        </div>
+        <span class="vertical-note">POD JUHOM 7666</span>
+      </div>
+    </section>
+
+    <section class="editorial" id="salon" aria-labelledby="salon-title">
+      <div class="section-number" aria-hidden="true">01</div>
+      <div class="editorial-copy">
+        <p class="eyebrow">Jednoduchý prvý dojem</p>
+        <h2 id="salon-title">Menej hľadania. Viac jasnosti.</h2>
+        <p>
+          Cieľom webu nie je zahltiť návštevníka. Má rýchlo ukázať, kde salón je, ako ho kontaktovať a ako požiadať o termín. Presný zoznam služieb a cenník sa doplnia až z oficiálnych podkladov salónu.
+        </p>
+      </div>
+      <div class="editorial-points" role="list" aria-label="Čo web rieši">
+        <article role="listitem">
+          <span>01</span>
+          <h3>Kontakt bez hľadania</h3>
+          <p>Telefón a poloha sú viditeľné hneď na mobile.</p>
+        </article>
+        <article role="listitem">
+          <span>02</span>
+          <h3>Vlastná cesta zákazníka</h3>
+          <p>Návštevník nemusí prechádzať cez katalógy či adresáre.</p>
+        </article>
+        <article role="listitem">
+          <span>03</span>
+          <h3>Termín bez chaosu</h3>
+          <p>Demo flow ukazuje, ako môže vyzerať jednoduchá požiadavka na termín.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="booking-shell" id="termin" aria-labelledby="booking-title">
+      <div class="booking-intro">
+        <p class="eyebrow">Demo objednávky</p>
+        <h2 id="booking-title">Požiadať o termín</h2>
+        <p>
+          Toto je funkčná ukážka používateľského flow. Údaje sa neodosielajú ani neukladajú.
+        </p>
+      </div>
+
+      <form class="booking" id="booking-form" novalidate>
+        <div class="form-step" data-step="1">
+          <fieldset>
+            <legend>Čo potrebujete?</legend>
+            <label class="choice">
+              <input type="radio" name="intent" value="termín" required />
+              <span>
+                <strong>Chcem termín</strong>
+                <small>Vyberiem preferovaný deň a kontakt.</small>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="intent" value="poradiť" />
+              <span>
+                <strong>Chcem sa najprv poradiť</strong>
+                <small>Salón sa mi môže ozvať telefonicky.</small>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="radio" name="intent" value="otázka" />
+              <span>
+                <strong>Mám otázku</strong>
+                <small>Krátka požiadavka bez výberu konkrétnej služby.</small>
+              </span>
+            </label>
+          </fieldset>
+          <p class="form-error" id="intent-error" role="alert" hidden>Vyberte jednu možnosť.</p>
+          <button class="button button-primary" type="button" data-next>Pokračovať</button>
+        </div>
+
+        <div class="form-step" data-step="2" hidden>
+          <label for="date">Preferovaný deň</label>
+          <input id="date" name="date" type="date" required />
+          <p class="field-hint">Je to preferencia, nie potvrdená rezervácia.</p>
+          <div class="step-actions">
+            <button class="button button-ghost" type="button" data-back>Späť</button>
+            <button class="button button-primary" type="button" data-next>Pokračovať</button>
+          </div>
+          <p class="form-error" id="date-error" role="alert" hidden>Vyberte preferovaný deň.</p>
+        </div>
+
+        <div class="form-step" data-step="3" hidden>
+          <div class="field-grid">
+            <div>
+              <label for="name">Meno</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="phone">Telefón</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+421 ..." required />
+            </div>
+          </div>
+          <label for="note">Poznámka <span class="muted">(voliteľné)</span></label>
+          <textarea id="note" name="note" rows="4" placeholder="Napr. kedy sa vám najlepšie volá"></textarea>
+          <p class="field-hint">Demo: formulár nič neposiela ani neukladá.</p>
+          <div class="step-actions">
+            <button class="button button-ghost" type="button" data-back>Späť</button>
+            <button class="button button-primary" type="submit">Skontrolovať požiadavku</button>
+          </div>
+          <p class="form-error" id="contact-error" role="alert" hidden>Vyplňte meno a telefón.</p>
+        </div>
+
+        <section class="demo-confirmation" id="demo-confirmation" hidden aria-live="polite" aria-labelledby="confirmation-title">
+          <span class="confirmation-mark" aria-hidden="true">✓</span>
+          <p class="eyebrow">Demo potvrdenie</p>
+          <h3 id="confirmation-title">Požiadavka je pripravená.</h3>
+          <p id="confirmation-copy"></p>
+          <p class="field-hint">Nič nebolo odoslané. V ostrej verzii by sa požiadavka mohla poslať do e‑mailu, CRM alebo rezervačného systému salónu.</p>
+          <div class="step-actions">
+            <button class="button button-ghost" type="button" id="restart">Vyplniť znova</button>
+            <a class="button button-primary" href="tel:+421915183517">Zavolať salónu</a>
+          </div>
+        </section>
+      </form>
+    </section>
+
+    <section class="contact-band" id="kontakt" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="contact-title">GOLDEN beauty Trenčín</h2>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <span class="contact-label">Adresa</span>
+          <address>Pod Juhom 7666<br />911 01 Trenčín</address>
+        </div>
+        <div>
+          <span class="contact-label">Telefón</span>
+          <a href="tel:+421915183517">+421 915 183 517</a>
+        </div>
+        <div>
+          <span class="contact-label">Navigácia</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pod+Juhom+7666%2C+Tren%C4%8D%C3%ADn" target="_blank" rel="noopener noreferrer">Otvoriť mapu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>GOLDEN beauty Trenčín</strong> · demo návrh webu</p>
+    <p>Neoficiálna ukážka vytvorená pre prezentáciu možnej spolupráce. Formulár nič neodosiela.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
